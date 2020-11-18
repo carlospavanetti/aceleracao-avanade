@@ -1,0 +1,14 @@
+<div class="todo-list">
+  <h2>Lista de afazeres</h2>
+  <ul class="task-list">
+    <li *ngFor="let task of tasks" [class]="itemClassFromTask(task)">
+      <mat-checkbox class="checkbox" [checked]="task.done" (change)="toggleDone(task)">{{task.description}}</mat-checkbox>
+    </li>
+  </ul>
+  <form>
+    <mat-form-field>
+      <input matInput [(ngModel)]="itemToAdd" name="item" placeholder="Preciso fazer..." />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addToList()">Adicionar tarefa</button>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+.todo-list {
+  background-color: #303030;
+  color: white;
+  padding: 16px;
+}
+
+.task-list {
+  padding-left: 20px;
+}
+
+.task-list > .item {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.task-list > .item.-done {
+  font-style: italic;
+}
+
+.item.-done > .checkbox {
+  text-decoration: line-through;
+}
